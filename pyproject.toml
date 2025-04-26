@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "time_series_forecasting_of_stock_prices_using_deep_learning"
+version = "0.1.0"
+description = "his project implements an end-to-end stock price prediction system using LSTM (Long Short-Term Memory) networks. It covers data preprocessing, model training, evaluation, and visualization in a modular, production-ready structure, enabling easy scalability and future enhancements."
+readme = "README.rst"
+authors = [
+  {name = "Venkata Sai Rohith Andanala", email = "andanalarohith3575@gmail.com"}
+]
+maintainers = [
+  {name = "Venkata Sai Rohith Andanala", email = "andanalarohith3575@gmail.com"}
+]
+classifiers = [
+
+]
+license = {text = "MIT license"}
+dependencies = [
+  "typer"
+]
+
+[project.optional-dependencies]
+dev = [
+    "coverage",  # testing
+    "mypy",  # linting
+    "pytest",  # testing
+    "ruff"  # linting
+]
+
+[project.urls]
+
+bugs = "https://github.com/RohithAndanala/time_series_forecasting_of_stock_prices_using_deep_learning/issues"
+changelog = "https://github.com/RohithAndanala/time_series_forecasting_of_stock_prices_using_deep_learning/blob/master/changelog.md"
+homepage = "https://github.com/RohithAndanala/time_series_forecasting_of_stock_prices_using_deep_learning"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"*" = ["*.*"]
+
+
+
+
+# Mypy
+# ----
+
+[tool.mypy]
+files = "."
+
+# Use strict defaults
+strict = true
+warn_unreachable = true
+warn_no_return = true
+
+[[tool.mypy.overrides]]
+# Don't require test functions to include types
+module = "tests.*"
+allow_untyped_defs = true
+disable_error_code = "attr-defined"
+
