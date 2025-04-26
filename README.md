@@ -86,9 +86,9 @@ Date,Open,High,Low,Close,Volume
 - Edit the configuration file `configs/config.yaml` to match your data paths and training settings:
 
 ```yaml
-train_data_path: "data/raw/train.csv"
-test_data_path: "data/raw/test.csv"
-epochs: 50
+train_data_path: "data/Google_Stock_Price_Train.csv"
+test_data_path: "data/Google_Stock_Price_Test.csv"
+epochs: 100
 batch_size: 32
 timesteps: 60
 feature_range: [0, 1]
